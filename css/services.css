@@ -1,0 +1,126 @@
+/* 页面标题样式 */
+.page-title {
+    background: var(--light-gray);
+    padding: 40px 0;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.page-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+}
+
+.page-title h1 {
+    color: var(--primary-color);
+    font-size: 36px;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+/* 业务介绍样式 */
+.services-intro {
+    padding: 40px 0;
+}
+
+.intro-text {
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 2;
+    text-indent: 2em;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+/* 业务详情样式 */
+.services-detail {
+    padding: 60px 0;
+    background: var(--light-gray);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,102,204,0.2);
+}
+
+.service-icon i {
+    font-size: 32px;
+    color: white;
+}
+
+.service-card h3 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 22px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.service-content {
+    color: #666;
+    line-height: 1.8;
+}
+
+.service-content p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.service-content ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.service-content ul li {
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+.service-content ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    background: var(--primary-color);
+    border-radius: 50%;
+} 

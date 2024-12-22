@@ -1,0 +1,219 @@
+/* 页面标题样式 */
+.page-title {
+    background: var(--light-gray);
+    padding: 40px 0;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.page-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+}
+
+.page-title h1 {
+    color: var(--primary-color);
+    font-size: 36px;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+/* 公司简介样式 */
+.company-intro {
+    padding: 40px 0;
+}
+
+.intro-text {
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 2;
+    text-indent: 2em;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+/* 发展历程样式 */
+.history {
+    padding: 60px 0;
+    background: var(--light-gray);
+}
+
+.history .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.history-card {
+    background: white;
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+}
+
+.history-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.history-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,102,204,0.2);
+}
+
+.history-icon i {
+    font-size: 32px;
+    color: white;
+}
+
+.history-card h3 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 22px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.history-content {
+    color: #666;
+    line-height: 1.8;
+}
+
+.history-content p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.history-content ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.history-content ul li {
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+.history-content ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    background: var(--primary-color);
+    border-radius: 50%;
+}
+
+/* 企业文化样式 */
+.culture {
+    padding: 60px 0;
+}
+
+.culture-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.culture-card {
+    background: white;
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+}
+
+.culture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.culture-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,102,204,0.2);
+}
+
+.culture-icon i {
+    font-size: 32px;
+    color: white;
+}
+
+.culture-card h3 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 22px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.culture-content {
+    color: #666;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 992px) {
+    .history-grid,
+    .culture-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .history-grid,
+    .culture-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .history-card,
+    .culture-card {
+        padding: 30px 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .intro-text {
+        font-size: 15px;
+    }
+    
+    .history-content ul li,
+    .culture-content {
+        font-size: 14px;
+    }
+} 

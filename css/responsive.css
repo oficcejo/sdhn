@@ -1,0 +1,189 @@
+/* 平板电脑和小屏幕电脑 (≤ 992px) */
+@media screen and (max-width: 992px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    /* 导航菜单调整 */
+    .main-nav {
+        display: none;  /* 默认隐藏菜单 */
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .main-nav li {
+        width: 100%;
+        margin: 0;
+    }
+
+    .main-nav li a {
+        padding: 15px 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 添加汉堡菜单按钮 */
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        color: var(--primary-color);
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    /* 调整轮播图高度 */
+    .slider-container {
+        height: 400px;
+    }
+
+    /* 调整核心业务布局 */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* 调整公司优势布局 */
+    .advantages-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* 调整案例展示布局 */
+    .cases-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* 调整新闻布局 */
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* 手机端 (≤ 768px) */
+@media screen and (max-width: 768px) {
+    /* 调整页面标题 */
+    .page-title h1 {
+        font-size: 28px;
+    }
+
+    /* 调整轮播图高度 */
+    .slider-container {
+        height: 300px;
+    }
+
+    .slide-content h2 {
+        font-size: 24px;
+    }
+
+    .slide-content p {
+        font-size: 16px;
+    }
+
+    /* 调整核心业务布局 */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 调整公司优势布局 */
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 调整案例展示布局 */
+    .cases-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 调整新闻布局 */
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 调整方案公示列表 */
+    .list-header {
+        display: none;  /* 隐藏表头 */
+    }
+
+    .announcement-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .item-title {
+        font-size: 16px;
+    }
+
+    /* 调整分页样式 */
+    .pagination a,
+    .pagination span {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* 小型手机 (≤ 576px) */
+@media screen and (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    /* 调整顶部信息栏 */
+    .top-bar {
+        font-size: 12px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    /* 调整轮播图 */
+    .slider-container {
+        height: 250px;
+    }
+
+    .slide-content h2 {
+        font-size: 20px;
+    }
+
+    .slide-content p {
+        font-size: 14px;
+    }
+
+    /* 调整按钮大小 */
+    .btn-more {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* 调整卡片内容 */
+    .service-item,
+    .advantage-item,
+    .case-item,
+    .news-item {
+        padding: 15px;
+    }
+
+    .case-image,
+    .news-image {
+        height: 180px;
+    }
+}
